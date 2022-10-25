@@ -12,7 +12,7 @@ console.log(courses)
           <Container>
             <Row className='m-2'>
                 <Col lg={3}>
-                {courses.map(lefCourse=><LeftSideCourse></LeftSideCourse>                      </Col>
+                {courses.map(leftCourse=><LeftSideCourse key={leftCourse.id}  leftCourse={leftCourse}></LeftSideCourse> )}  </Col>
                 <Col lg={9} className='cardCol'>
                     {courses.map(course=><CourseCard key={course.id}  course={course}>
                                  </CourseCard>)}
