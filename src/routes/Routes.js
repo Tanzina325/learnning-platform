@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-import Course from "../pages/Course";
+import CourseDetails from "../pages/CourseDetails";
 import Courses from "../pages/Courses";
 import Home from "../pages/Home";
 
@@ -20,11 +20,12 @@ export const routes = createBrowserRouter([
             },
             {
                 path:'/courses',
-                element:<Courses></Courses>
+                element:<Courses></Courses>,
+                loader:() => fetch('https://b610-lerning-platform-server-side-blond.vercel.app/courses')
             },
             {
                 path:'/course/:id',
-                element:<Course></Course>
+                element:<CourseDetails></CourseDetails>
             }
         ]
 
