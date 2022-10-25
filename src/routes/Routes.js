@@ -25,7 +25,8 @@ export const routes = createBrowserRouter([
             },
             {
                 path:'/course/:id',
-                element:<CourseDetails></CourseDetails>
+                element:<CourseDetails></CourseDetails>,
+                loader:({params})=>fetch(`https://b610-lerning-platform-server-side-blond.vercel.app/courses/${params.id}`)
             }
         ]
 
