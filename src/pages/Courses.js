@@ -11,9 +11,9 @@ console.log(courses)
         <div>
           <Container>
             <Row className='m-2'>
-                <Col lg={3}>
+                <Col  lg={3}>
                 {courses.map(leftCourse=><LeftSideCourse key={leftCourse.id}  leftCourse={leftCourse}></LeftSideCourse> )}  </Col>
-                <Col lg={9} className='cardCol'>
+                <Col  lg={9} className='cardCol'>
                     {courses.map(course=><CourseCard key={course.id}  course={course}>
                                  </CourseCard>)}
                 </Col>
