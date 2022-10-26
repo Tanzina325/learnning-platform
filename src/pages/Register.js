@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -7,7 +7,7 @@ import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 const Register = () => {
 const {createUser}= useContext(AuthContext);
 const navigate =useNavigate();
-
+const[error,setError]=useState();
     const handleSubmit =event =>{
         event.preventDefault();
         const form = event.target;
@@ -19,11 +19,16 @@ const navigate =useNavigate();
         createUser(email,password)
         .then(result=>{
             const user=result.user;
-            console.log(user)
+            console.log(user);
+            form.reset();
+             setError('');
+             navigate('/')
         })
-        .catch(error=>console.error(error));
-        form.reset();
-        navigate('/')
+        .catch(error=>{
+            console.error(error);
+        setError(error.message)});
+        
+        
     }
     return (
         <div className ='w-25 mx-auto my-5 border rounded p-3 bg-dark'>
@@ -41,14 +46,16 @@ const navigate =useNavigate();
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" name='email' placeholder="Enter email" />
+        <Form.Control type="email" name='email' placeholder="Enter email" required />
         </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" name='password' placeholder="Password" />
+        <Form.Control type="password" name='password' placeholder="Password" required />
       </Form.Group>
-      
+      <Form.Text className="text-danger mb-3">
+          {error}
+        </Form.Text>
       <Button variant="primary" type="submit">
         Submit
       </Button>
