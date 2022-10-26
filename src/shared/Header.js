@@ -39,17 +39,18 @@ const Header = () => {
               <Nav.Link href="/register">Sign Up</Nav.Link>
               </>
             }
+            </Nav>
             <OverlayTrigger
       placement="bottom"
       overlay={<Tooltip id="button-tooltip-2">{user?.displayName}</Tooltip>}
     >{user?.photoURL ?
-      <Image style={{height:'40px'}} roundedCircle src={user.photoURL}></Image>
+      <Image style={{height:'40px'}} roundedCircle  src={user.photoURL}></Image>
       :<FaUser></FaUser> 
      }</OverlayTrigger>
             
               
             
-          </Nav>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

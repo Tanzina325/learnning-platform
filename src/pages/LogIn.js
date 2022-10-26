@@ -59,7 +59,7 @@ const LogIn = () => {
       </Button>
       
     </Form>
-    <Link to ='/register'><p>Already have an account ?</p></Link>     
+    <Link to ='/register'><p>New to this website ?</p></Link>     
         </div>
     );
 };
