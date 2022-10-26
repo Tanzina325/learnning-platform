@@ -1,4 +1,4 @@
-# EdCAMB_LEARNING_PLATFORM
+# EdUCAMB_LEARNING_PLATFORM
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [ React Bootstrap](https://react-bootstrap.github.io/) and
 [ React Icons](https://react-icons.github.io/react-icons)
@@ -41,7 +41,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Live site
 
-Live site is here :[https://b610-learning-platform-c-cbd49.web.app]((https://b610-learning-platform-c-cbd49.web.app)
+Live site is here :[https://b610-learning-platform-c-cbd49.web.app](https://b610-learning-platform-c-cbd49.web.app)
 
 
 <!-- To learn React, check out the [React documentation](https://reactjs.org/).
