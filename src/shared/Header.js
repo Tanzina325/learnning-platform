@@ -9,6 +9,7 @@ import { FaUser } from 'react-icons/fa';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import Button from 'react-bootstrap/Button';
 const Header = () => {
   const {user,logOut} = useContext(AuthContext);
   const handleLogOut =()=>{
@@ -26,13 +27,13 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/courses">Courses</Nav.Link>
-            <Nav.Link href="#blogs">Blogs</Nav.Link>
-            <Nav.Link href="#faq">FAQ</Nav.Link>
+            <Nav.Link href="/blogs">Blogs</Nav.Link>
+            <Nav.Link href="/faq">FAQ</Nav.Link>
         </Nav>
           <Nav>
             {
               user?.uid ?
-              <button onClick={handleLogOut}>LogOut</button>
+              <Button onClick={handleLogOut} variant="danger">LogOut</Button>
               :
               <>
               <Nav.Link href="/login">LogIn</Nav.Link>
@@ -44,7 +45,7 @@ const Header = () => {
       placement="bottom"
       overlay={<Tooltip id="button-tooltip-2">{user?.displayName}</Tooltip>}
     >{user?.photoURL ?
-      <Image style={{height:'40px'}} roundedCircle  src={user.photoURL}></Image>
+      <Image className='mx-3' style={{height:'30px'}} roundedCircle  src={user.photoURL}></Image>
       :<FaUser></FaUser> 
      }</OverlayTrigger>
             

@@ -4,15 +4,17 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
-
+import { FaGoogle,FaGithub } from 'react-icons/fa'
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
 const LogIn = () => {
-    const {signIn} =useContext(AuthContext);
+    const {signIn,providerLogin} =useContext(AuthContext);
     const navigate=useNavigate();
     const[error,setError]=useState('');
     const location =useLocation();
-
+    const googleProvider = new GoogleAuthProvider()
+    const githubProvider =new GithubAuthProvider()
     const from =location.state?.from?.pathname || '/';
 
     const handleSubmit =event =>{
@@ -33,6 +35,24 @@ const LogIn = () => {
             console.error(error);
             setError(error.message)})
     }
+    const handleGoogleSignIn=()=>{
+        providerLogin(googleProvider)
+        .then(result=>{
+          const user=result.user;
+          console.log(user);
+          navigate('/')})
+          .catch(error=>{
+              console.error(error);
+      })}
+      const handleGithubSignIn=()=>{
+          providerLogin(githubProvider)
+          .then(result=>{
+            const user=result.user;
+            console.log(user);
+            navigate('/')})
+            .catch(error=>{
+                console.error(error);
+        })}
     return (
     
         <div className ='w-25 mx-auto my-5 border rounded p-5 bg-dark'>
@@ -59,7 +79,15 @@ const LogIn = () => {
       </Button>
       
     </Form>
-    <Link to ='/register'><p>New to this website ?</p></Link>     
+    <Link to ='/register'><p>New to this website ?</p></Link>
+    <Form.Text className="text-light ">
+          <p>Try another method to login...</p>
+          
+          <div className='text-center'><span className='text-danger  p-2'><FaGoogle onClick={handleGoogleSignIn}></FaGoogle></span>
+          <span className='text-danger p-2'><FaGithub onClick={handleGithubSignIn}></FaGithub></span></div>
+        
+        
+        </Form.Text>     
         </div>
     );
 };
