@@ -3,6 +3,8 @@ import Main from "../layout/Main";
 import CourseDetails from "../pages/CourseDetails";
 import Courses from "../pages/Courses";
 import Home from "../pages/Home";
+import LogIn from "../pages/LogIn";
+import Register from "../pages/Register";
 
 export const routes = createBrowserRouter([
     {
@@ -27,7 +29,15 @@ export const routes = createBrowserRouter([
                 path:'/course/:id',
                 element:<CourseDetails></CourseDetails>,
                 loader:({params})=>fetch(`https://b610-lerning-platform-server-side-blond.vercel.app/courses/${params.id}`)
-            }
+            },
+            {
+                path:'/login',
+                element:<LogIn></LogIn>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
+            },
         ]
 
 }

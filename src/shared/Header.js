@@ -1,10 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
+import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BiBookReader } from "react-icons/bi";
+import { FaUser } from 'react-icons/fa';
+import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+  const {user} = useContext(AuthContext);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
@@ -18,10 +23,13 @@ const Header = () => {
             <Nav.Link href="#faq">FAQ</Nav.Link>
         </Nav>
           <Nav>
-            <Nav.Link href="#deets">LogIn</Nav.Link>
-            <Nav.Link href="#deets">Sign Up</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link href="/login">LogIn</Nav.Link>
+            <Nav.Link href="/register">Sign Up</Nav.Link>
+            <Nav.Link eventKey={2} href=''>
+              {user?.photoURL ?
+             <Image style={{height:'40px'}} roundedCircle src={user.photoURL}></Image>
+             :<FaUser></FaUser> 
+            }
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
