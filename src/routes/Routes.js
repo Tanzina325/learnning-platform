@@ -6,6 +6,7 @@ import Courses from "../pages/Courses";
 import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import Register from "../pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -42,7 +43,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path:'/checkout/:id',
-                element:<CheckOut></CheckOut>,
+                element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 loader:({params})=>fetch(`https://b610-lerning-platform-server-side-blond.vercel.app/courses/${params.id}`)
             }
         ]

@@ -11,7 +11,7 @@ const CheckOut = () => {
         <div>
          <h1>{title}</h1>
          <p>
-            {user?.displayName && <><p>{user.displayName}</p>
+            {user?.uid && <><p>{user.displayName}</p>
             <p>{user.email}</p></>
             }
          </p>
