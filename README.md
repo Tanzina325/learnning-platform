@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# EdCAMB_LEARNING_PLATFORM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [ React Bootstrap](https://react-bootstrap.github.io/) and
+[ React Icons](https://react-icons.github.io/react-icons)
+## Available Features
 
 In the project directory, you can run:
 
@@ -14,10 +14,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `Courses`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Courses pages are designed by different courses.\
+See the section about [Courses](https://b610-learning-platform-c-cbd49.web.app/courses) for more information.
 
 ### `npm run build`
 
