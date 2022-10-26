@@ -9,7 +9,13 @@ import { FaUser } from 'react-icons/fa';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
+  const {user,logOut} = useContext(AuthContext);
+  const handleLogOut =()=>{
+    logOut()
+    .then(()=>{})
+    .then(error=>console.error(error))
+    
+  }
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
@@ -23,8 +29,16 @@ const Header = () => {
             <Nav.Link href="#faq">FAQ</Nav.Link>
         </Nav>
           <Nav>
-            <Nav.Link href="/login">LogIn</Nav.Link>
-            <Nav.Link href="/register">Sign Up</Nav.Link>
+            {
+              user?.uid ?
+              <button onClick={handleLogOut}>LogOut</button>
+              :
+              <>
+              <Nav.Link href="/login">LogIn</Nav.Link>
+              <Nav.Link href="/register">Sign Up</Nav.Link>
+              </>
+            }
+            
             <Nav.Link eventKey={2} href=''>
               {user?.photoURL ?
              <Image style={{height:'40px'}} roundedCircle src={user.photoURL}></Image>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 
 const LogIn = () => {
     return (
@@ -23,7 +24,8 @@ const LogIn = () => {
       <Button variant="primary" type="submit">
         Submit
       </Button>
-    </Form>    
+    </Form>
+    <Link to ='/register'><p>Already have an account ?</p></Link>     
         </div>
     );
 };
