@@ -7,7 +7,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { BiBookReader } from "react-icons/bi";
 import { FaUser } from 'react-icons/fa';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
-
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 const Header = () => {
   const {user,logOut} = useContext(AuthContext);
   const handleLogOut =()=>{
@@ -38,13 +39,16 @@ const Header = () => {
               <Nav.Link href="/register">Sign Up</Nav.Link>
               </>
             }
+            <OverlayTrigger
+      placement="bottom"
+      overlay={<Tooltip id="button-tooltip-2">{user?.displayName}</Tooltip>}
+    >{user?.photoURL ?
+      <Image style={{height:'40px'}} roundedCircle src={user.photoURL}></Image>
+      :<FaUser></FaUser> 
+     }</OverlayTrigger>
             
-            <Nav.Link eventKey={2} href=''>
-              {user?.photoURL ?
-             <Image style={{height:'40px'}} roundedCircle src={user.photoURL}></Image>
-             :<FaUser></FaUser> 
-            }
-            </Nav.Link>
+              
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
