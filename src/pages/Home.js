@@ -14,7 +14,7 @@ const Home = () => {
         <Carousel.Caption className=' w-75 mx-auto'  style={{position:'absolute',top:'40px',bottom:'0',left:'0',right:'0'}}>
           <h3 className='text-center text-warning'>Discover your perfect online courses today</h3>
           <h1 className='display-3 fw-bold text-center text-danger'>Educamb is the Top tutoring Online Platforms </h1>
-          <h3 className='text-left text-white'>Educamb is a full-featured, but easy to use online platforms for selling data-science courses,memberships and digital downloads in one place.</h3>
+          <h3 className='text-left text-white'>Educamb is a full-featured, but easy to use online platforms for selling data-science courses .</h3>
         
         </Carousel.Caption>
       </Carousel.Item>
@@ -29,7 +29,7 @@ const Home = () => {
 <Carousel.Caption className=' w-75 mx-auto'  style={{position:'absolute',top:'40px',bottom:'0',left:'0',right:'0'}}>
           <h3 className='text-center text-warning'>Discover your perfect online courses today</h3>
           <h1 className='display-3 fw-bold text-center text-danger'>Educamb is the Top tutoring Online Platforms </h1>
-          <h3 className='text-left text-white'>Educamb is a full-featured, but easy to use online platforms for selling data-science courses,memberships and digital downloads in one place.</h3>
+          <h3 className='text-left text-white'>Educamb is a full-featured, but easy to use online platforms for selling data-science courses .</h3>
         
         </Carousel.Caption>
         
@@ -45,7 +45,7 @@ const Home = () => {
 <Carousel.Caption className=' w-75 mx-auto'  style={{position:'absolute',top:'40px',bottom:'0',left:'0',right:'0'}}>
           <h3 className='text-center text-warning'>Discover your perfect online courses today</h3>
           <h1 className='display-3 fw-bold text-center text-danger'>Educamb is the Top tutoring Online Platforms </h1>
-          <h3 className='text-left text-light'>Educamb is a full-featured, but easy to use online platforms for selling data-science courses,memberships and digital downloads in one place.</h3>
+          <h3 className='text-left text-light'>Educamb is a full-featured, but easy to use online platforms for selling data-science courses .</h3>
         
         </Carousel.Caption>
       </Carousel.Item>

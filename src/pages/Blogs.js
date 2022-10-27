@@ -4,7 +4,7 @@ const Blogs = () => {
     return (
         <div>
            <h1 className='fw-bold text-center text-danger my-2 '>Here Blogs Are</h1>
-            <Accordion className='w-50 mx-auto my-3 p-5 bg-success' defaultActiveKey="0">
+            <Accordion className='w-75 mx-auto my-3 p-3 bg-success' defaultActiveKey="0">
       <Accordion.Item className='mb-3 ' eventKey="0">
         <Accordion.Header  >What is CORS?</Accordion.Header>
         <Accordion.Body>

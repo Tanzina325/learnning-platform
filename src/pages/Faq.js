@@ -4,7 +4,7 @@ const Faq = () => {
     return (
         <div >
             <h1 className='fw-bold text-center text-success my-2 '>Frequently Asked Questions</h1>
-            <Accordion className='w-50 mx-auto my-3 p-5 bg-danger' defaultActiveKey="0">
+            <Accordion className='w-75 mx-auto my-3 p-3 bg-danger' defaultActiveKey="0">
       <Accordion.Item className='mb-3 fs-5' eventKey="0">
         <Accordion.Header  >Is this academy helpful for personally or internally?</Accordion.Header>
         <Accordion.Body>
