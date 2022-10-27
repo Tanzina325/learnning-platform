@@ -22,9 +22,9 @@ function App() {
     <div className=""> 
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
-    
+    <div className=' text-center my-1 bg-success'><Button onClick={toggleTheme} variant="danger">Toggle Theme</Button></div>
     <RouterProvider router = {routes}></RouterProvider>
-    <div className=' text-center my-5'><Button onClick={toggleTheme} variant="danger">Toggle Theme</Button></div>
+    
     </ThemeProvider>
     </div>
   );

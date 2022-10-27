@@ -65,9 +65,9 @@ const[error,setError]=useState();
               console.error(error);
       })}
     return (
-        <div className ='w-25 mx-auto my-3 border rounded p-3 bg-dark'>
+        <div className =' w-75 mx-auto my-3 border rounded p-3 bg-danger'>
         <Form onSubmit={handleSubmit}>
-        <Form.Text className="text-light fw-bold fs-3">
+        <Form.Text className="text-light mx-auto fw-bold fs-3">
           Please Register
         </Form.Text>
       <Form.Group className="mb-2" controlId="formBasicEmail">

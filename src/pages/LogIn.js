@@ -55,7 +55,7 @@ const LogIn = () => {
         })}
     return (
     
-        <div className ='w-25 mx-auto my-5 border rounded p-5 bg-dark'>
+        <div className ='w-75 mx-auto my-5 border rounded p-5 bg-dark'>
         <Form onSubmit={handleSubmit}>
         <Form.Text className="text-light fw-bold fs-3">
           Please LogIn
