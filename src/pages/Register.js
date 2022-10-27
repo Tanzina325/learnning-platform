@@ -97,8 +97,8 @@ const[error,setError]=useState();
       <Form.Text className="text-light ">
           <p>Try another method to login...</p>
           
-          <div className='text-center'><span className='text-danger  p-2'><FaGoogle onClick={handleGoogleSignIn}></FaGoogle></span>
-          <span className='text-success p-2'><FaGithub onClick={handleGithubSignIn}></FaGithub></span></div>
+          <div className='text-center'><span className='text-light  p-2'><FaGoogle onClick={handleGoogleSignIn}></FaGoogle></span>
+          <span className='text-light p-2'><FaGithub onClick={handleGithubSignIn}></FaGithub></span></div>
         
         
         </Form.Text>
