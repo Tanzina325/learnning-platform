@@ -67,7 +67,7 @@ const[error,setError]=useState();
     return (
         <div className =' w-75 mx-auto my-3 border rounded p-3 bg-danger'>
         <Form onSubmit={handleSubmit}>
-        <Form.Text className="text-light mx-auto fw-bold fs-3">
+        <Form.Text className="text-light fw-bold fs-3">
           Please Register
         </Form.Text>
       <Form.Group className="mb-2" controlId="formBasicEmail">
@@ -98,7 +98,7 @@ const[error,setError]=useState();
           <p>Try another method to login...</p>
           
           <div className='text-center'><span className='text-danger  p-2'><FaGoogle onClick={handleGoogleSignIn}></FaGoogle></span>
-          <span className='text-danger p-2'><FaGithub onClick={handleGithubSignIn}></FaGithub></span></div>
+          <span className='text-success p-2'><FaGithub onClick={handleGithubSignIn}></FaGithub></span></div>
         
         
         </Form.Text>
