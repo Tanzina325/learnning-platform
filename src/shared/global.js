@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     
-    height: 200vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
