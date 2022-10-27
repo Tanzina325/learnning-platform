@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-import About from "../pages/About";
 import Blogs from "../pages/Blogs";
 import CheckOut from "../pages/CheckOut";
 import CourseDetails from "../pages/CourseDetails";
@@ -8,6 +7,7 @@ import Courses from "../pages/Courses";
 import Faq from "../pages/Faq";
 import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
+import Page404 from "../pages/Page404";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 
@@ -60,6 +60,7 @@ export const routes = createBrowserRouter([
         ]
         
 },
-{path:'/*',
-element:<About></About>}
+         {
+            path:'/*',
+            element:<Page404></Page404>}
 ]);

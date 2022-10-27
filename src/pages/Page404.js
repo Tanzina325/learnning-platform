@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const About = () => {
+const Page404 = () => {
     return (
         <div className='d-flex justify-content-center my-5 p-5 '><div className='bg-primary w-50 text-center p-4'>
         <h1 className='fw-bold'>This route is not found</h1>
@@ -10,4 +10,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Page404;

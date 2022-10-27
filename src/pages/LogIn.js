@@ -40,7 +40,7 @@ const LogIn = () => {
         .then(result=>{
           const user=result.user;
           console.log(user);
-          navigate('/')})
+          navigate(from,{replace:true})})
           .catch(error=>{
               console.error(error);
       })}
@@ -49,7 +49,7 @@ const LogIn = () => {
           .then(result=>{
             const user=result.user;
             console.log(user);
-            navigate('/')})
+            navigate(from,{replace:true})})
             .catch(error=>{
                 console.error(error);
         })}
@@ -61,13 +61,13 @@ const LogIn = () => {
           Please LogIn
         </Form.Text>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" name='email' placeholder="Enter email" required />
+        <Form.Label className='text-light'>Email address</Form.Label>
+        <Form.Control  type="email" name='email' placeholder="Enter email" required />
         
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label className='text-light'>Password</Form.Label>
         <Form.Control type="password" name='password'placeholder="Password" required />
       </Form.Group>
       <Form.Text className="text-danger mb-3 ">

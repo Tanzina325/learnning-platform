@@ -71,20 +71,20 @@ const[error,setError]=useState();
           Please Register
         </Form.Text>
       <Form.Group className="mb-2" controlId="formBasicEmail">
-        <Form.Label>Your Name</Form.Label>
-        <Form.Control type="text" name='name' placeholder="Your name" />
+        <Form.Label className='text-light'>Your Name</Form.Label>
+        <Form.Control type="text" name='name' placeholder="Your full name" />
         </Form.Group>
         <Form.Group className="mb-2" controlId="formBasicEmail">
-        <Form.Label>Photo Url</Form.Label>
+        <Form.Label className='text-light'>Photo Url</Form.Label>
         <Form.Control type="text" name='photoURl' placeholder="Photo url" />
         </Form.Group>
         <Form.Group className="mb-2" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label className='text-light'>Email address</Form.Label>
         <Form.Control type="email" name='email' placeholder="Enter email" required />
         </Form.Group>
 
       <Form.Group className="mb-2" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label className='text-light'>Password</Form.Label>
         <Form.Control type="password" name='password' placeholder="Password" required />
       </Form.Group>
       <Form.Text className="text-danger mb-3">

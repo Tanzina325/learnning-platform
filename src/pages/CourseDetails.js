@@ -24,12 +24,12 @@ const CourseDetails = () => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title">{title}</h5>
-              <p className="card-text">{details}</p>
+              <h5 className="card-title text-secondary">{title}</h5>
+              <p className="card-text text-secondary">{details}</p>
               <div className='d-flex justify-content-evenly'>
-                <p>{cost}</p>
-                <p>{duration}</p>
-            <p>{time}</p>
+                <p className=" text-dark fw-bold">{cost}</p>
+                <p className="card-text text-dark fw-bold">{duration}</p>
+            <p className="card-text text-dark fw-bold">{time}</p>
               </div>
           <div className='text-center m-4'>
             <Link to={`/checkout/${id}`}> <Button   variant="danger">Get premium course</Button>{' '}</Link>
