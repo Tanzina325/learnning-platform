@@ -7,7 +7,7 @@ const Home = () => {
       <Carousel.Item style={{position:'relative'}}>
         <img
           className="d-block w-100 "
-          style={{height:'400px',opacity:'0.8'}} 
+          style={{height:'500px',opacity:'0.8'}} 
           src="https://miro.medium.com/max/15174/1*xX6Cpskem0SbqQuPZ8R-4g.jpeg"
           alt="First slide"
         />
@@ -21,7 +21,7 @@ const Home = () => {
       <Carousel.Item style={{position:'relative'}}>
         <img
           className="d-block w-100"
-          style={{height:'400px',opacity:"0.8"}} 
+          style={{height:'500px',opacity:"0.8"}} 
           src="http://procurementpeoplecloud.co.uk/wp-content/uploads/2018/04/PCD-02-04-18.jpg"
           alt="Second slide"
         />
@@ -37,7 +37,7 @@ const Home = () => {
       <Carousel.Item style={{position:'relative'}}>
         <img
           className="d-block w-100"
-          style={{height:'400px',opacity:'0.8'}} 
+          style={{height:'500px',opacity:'0.8'}} 
           src="https://wallpapercave.com/wp/wp4748499.jpg"
           alt="Third slide"
         />
